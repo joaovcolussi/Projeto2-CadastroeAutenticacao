@@ -5,7 +5,9 @@ class UserRepository{
     private int $nextId = 1;
 
     public function __construct(){
-        $this->users = [];
+        $this->users = [
+            1 => new User(1, 'João Silva', 'joao@email.com', password_hash('Senha123', PASSWORD_DEFAULT)),
+        ];
         $this->nextId = 2;
     }
 
